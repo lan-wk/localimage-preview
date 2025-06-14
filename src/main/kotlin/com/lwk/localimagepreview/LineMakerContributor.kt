@@ -44,10 +44,7 @@ abstract class LineMakerContributor: RunLineMarkerContributor() {
         }
 
 
-        // 假设这里需要一个 Icon 作为第一个参数，使用 AllIcons.Debugger.Watch 作为示例
-        return Info(AllIcons.Mac.AppIconOk512, arrayOf()) {
-            "preview image"
-        }
+        return null
     }
 
     private fun findImageFile(project: Project, imagePath: String): File? {
