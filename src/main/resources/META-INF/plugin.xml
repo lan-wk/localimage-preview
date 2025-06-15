@@ -5,20 +5,26 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>LocalImage Preview</name>
+    <name>LocalImage Preview</name>`
+    <version>1.0.0</version>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.lwk.com">lwk</vendor>
+    <vendor url="https://github.com/lan-wk" email="1499253205@qq.com">lwk</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    A preview image url plugin, when you define an image url, you can preview it content and size in IDE
-  ]]></description>
+    In the Flutter project, preview the image of the project according to the image address in the Dart file.
+  ]]></description>`
+
+    <change-notes>
+        1.first version
+    </change-notes>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
     <depends>com.intellij.modules.lang</depends>
     <depends>Dart</depends>
 
