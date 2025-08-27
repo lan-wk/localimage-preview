@@ -26,11 +26,11 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.androidstudio</depends>
     <depends>com.intellij.modules.lang</depends>
-    <depends>Dart</depends>
+    <depends optional="true" config-file="dart-extension.xml">Dart</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
-        <runLineMarkerContributor implementationClass="com.lwk.localimagepreview.DartLineMarkerContributor" language=""/>
-    </extensions>
+<!--    <extensions defaultExtensionNs="com.intellij">-->
+<!--        <runLineMarkerContributor implementationClass="com.lwk.localimagepreview.DartLineMarkerContributor" language=""/>-->
+<!--    </extensions>-->
 </idea-plugin>

@@ -25,6 +25,8 @@ dependencies {
         // 新增 Dart 插件依赖
         plugin("Dart:243.23654.44")
     }
+
+    //compileOnly(files("libs/dart.jar"))
 }
 
 intellijPlatform {
