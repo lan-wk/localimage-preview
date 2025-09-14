@@ -24,7 +24,7 @@ abstract class LineMakerContributor: RunLineMarkerContributor() {
         val imageFile = findImageFile(project, imagePath)
         if (imageFile != null && imageFile.exists()) {
             val icon = loadScaledImageIcon(imageFile)
-
+            System.out.println("加载到图片")
             val openImageAction = object : AnAction("Preview", "Preview", AllIcons.Debugger.Watch) {
                 override fun actionPerformed(e: AnActionEvent) {
                     print("122")
@@ -40,11 +40,14 @@ abstract class LineMakerContributor: RunLineMarkerContributor() {
                     }
                 }
             }
+            System.out.println("openImageAction： ")
             return  Info(icon, arrayOf(openImageAction))
         }
 
-
-        return null
+        System.out.println("匹配到地址但没有找到图片")
+        return Info(AllIcons.General.Warning, arrayOf()) {
+            "No Image"
+        }
     }
 
     private fun findImageFile(project: Project, imagePath: String): File? {
@@ -81,7 +84,7 @@ abstract class LineMakerContributor: RunLineMarkerContributor() {
         val virtualFile = FilenameIndex.getVirtualFilesByName(
             "pubspec.yaml", GlobalSearchScope.projectScope(project)
         )
-        return virtualFile.firstOrNull();
+        return virtualFile.firstOrNull()
     }
 
     private fun loadScaledImageIcon(file: File): Icon? {
